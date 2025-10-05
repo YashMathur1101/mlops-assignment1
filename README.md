@@ -1,29 +1,54 @@
-# ML Ops Assignment 1
+Objective
 
-This repository contains my submission for **Assignment 1** of the ML Ops course.  
-The assignment demonstrates:
-- Environment setup and dependency management
-- Git branching workflow (`main`, `dtree`, `kernelridge`)
-- Model training with scikit-learn (Decision Tree and Kernel Ridge)
-- Continuous Integration (CI) using GitHub Actions
+The goal of this assignment is to gain hands-on experience with essential MLOps practices.
+This includes setting up Python environments, managing dependencies, using Git and GitHub branching workflows, training machine learning models with scikit-learn, and automating experiments through Continuous Integration (CI) using GitHub Actions.
 
----
+Tasks
 
-## 📂 Repository Structure
-﻿# ML Ops Assignment 1
+Environment Setup
 
----
+Create and activate a virtual environment.
 
-## ⚙️ Environment Setup
+Install dependencies (numpy, pandas, scikit-learn, joblib).
 
-### Using Python venv (recommended)
-```bash
-# Create and activate virtual environment
-py -3 -m venv mlops1
-.\mlops1\Scripts\Activate.ps1   # PowerShell
+Save them in a requirements.txt file.
 
-# Upgrade pip and install dependencies
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+GitHub Repository
 
+Initialize a new Git repository locally.
 
+Create a public GitHub repository.
+
+Push all changes using Git CLI (not via GitHub web upload).
+
+Branch dtree
+
+Create a new branch named dtree.
+
+Implement misc.py containing helper functions (data loading, preprocessing, splitting, training, evaluation).
+
+Implement train.py to train a DecisionTreeRegressor.
+
+Commit and push changes, then merge dtree into main.
+
+Branch kernelridge
+
+Create a new branch named kernelridge.
+
+Implement train2.py to train a Kernel Ridge Regressor.
+
+Add GitHub Actions workflow (.github/workflows/ci.yml) to:
+
+Install dependencies
+
+Run train.py
+
+Run train2.py
+
+Push changes to kernelridge.
+
+Continuous Integration
+
+On push to kernelridge, the GitHub Actions workflow should automatically run.
+
+Logs should show model training output including per-run and average MSE values.
