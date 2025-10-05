@@ -12,3 +12,18 @@ The assignment demonstrates:
 ## 📂 Repository Structure
 ﻿# ML Ops Assignment 1
 
+---
+
+## ⚙️ Environment Setup
+
+### Using Python venv (recommended)
+```bash
+# Create and activate virtual environment
+py -3 -m venv mlops1
+.\mlops1\Scripts\Activate.ps1   # PowerShell
+
+# Upgrade pip and install dependencies
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+
